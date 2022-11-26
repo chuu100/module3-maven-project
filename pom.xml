@@ -60,6 +60,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
             <!-- Run java-fx app over Maven -->
             <plugin>
                 <groupId>org.openjfx</groupId>
@@ -79,9 +80,8 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                    <outputDirectory>
-                        ${project.build.directory}/dependency/
-                    </outputDirectory>
+                    <outputDirectory>${project.build.directory}/dependency/</outputDirectory>
+                    <includeScope>compile</includeScope>
                 </configuration>
                 <executions>
                     <execution>
